@@ -99,7 +99,7 @@ npm run build
 
 ---
 
-## ⚙️ Backend Behavior
+##  Backend Behavior
 
 - The backend exposes a minimal REST API at `/api/rooms`.
 - Room state is persisted in `server/db.json`.

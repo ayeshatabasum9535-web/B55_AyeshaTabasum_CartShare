@@ -7,12 +7,8 @@ const PORT = process.env.PORT || 4000;
 
 // Allow all localhost origins (any port) in development.
 // In production, set CORS_ORIGIN env var to your deployed frontend URL.
-const corsOrigin = process.env.CORS_ORIGIN;
-app.use(cors(
-  corsOrigin
-    ? { origin: corsOrigin }
-    : { origin: /^http:\/\/localhost(:\d+)?$/ }
-));
+const corsOrigin = process.env.CORS_ORIGIN || "https://fabulous-longma-607b5d.netlify.app";
+app.use(cors({ origin: corsOrigin }));
 app.use(express.json());
 
 const dbPath = new URL('./db.json', import.meta.url);

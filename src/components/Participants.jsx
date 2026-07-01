@@ -2,7 +2,7 @@ import React from 'react';
 import { Users } from 'lucide-react';
 import { getAvatarInitials } from '../utils/roomUtils';
 
-// Curated list of background colors for participant avatars
+
 const AVATAR_COLORS = [
   'bg-blue-500 text-white',
   'bg-emerald-500 text-white',
@@ -14,9 +14,7 @@ const AVATAR_COLORS = [
   'bg-pink-500 text-white'
 ];
 
-/**
- * Returns a consistent avatar color class based on username hash.
- */
+
 function getAvatarColor(name) {
   if (!name) return AVATAR_COLORS[0];
   let hash = 0;
@@ -27,9 +25,7 @@ function getAvatarColor(name) {
   return AVATAR_COLORS[index];
 }
 
-/**
- * Participants component to display everyone sharing the current shopping room.
- */
+
 export default function Participants({ participants = [], currentUsername }) {
   return (
     <div className="rounded-2xl border border-slate-100 bg-white p-5 shadow-sm transition-all duration-200 dark:border-slate-800 dark:bg-slate-900">

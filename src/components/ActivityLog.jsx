@@ -1,9 +1,7 @@
 import React from 'react';
 import { ScrollText, PlusCircle, MinusCircle, RefreshCw, Trash2, UserPlus, HelpCircle } from 'lucide-react';
 
-/**
- * Maps an action string to its visual representation (icon and color classes).
- */
+
 function getActionSpecs(action) {
   const normAction = action.toLowerCase();
   if (normAction.includes('added') || normAction === 'add') {
@@ -48,9 +46,7 @@ function getActionSpecs(action) {
   };
 }
 
-/**
- * Formats ISO date string into readable hh:mm:ss format for student project simplicity.
- */
+
 function formatTime(isoString) {
   try {
     const date = new Date(isoString);
@@ -60,9 +56,7 @@ function formatTime(isoString) {
   }
 }
 
-/**
- * ActivityLog component showing what users did, when, and to what items.
- */
+
 export default function ActivityLog({ logs = [] }) {
   return (
     <div className="flex flex-col h-full rounded-2xl border border-slate-100 bg-white p-5 shadow-sm dark:border-slate-800 dark:bg-slate-900">

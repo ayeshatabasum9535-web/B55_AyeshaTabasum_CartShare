@@ -1,16 +1,7 @@
 import React, { useState } from 'react';
 import { Plus, Trash2, Edit, Search, DollarSign, RefreshCw, ShoppingBag, Receipt, Loader2 } from 'lucide-react';
 
-/**
- * Cart component.
- *
- * FIX (responsiveness): On mobile the stat cards now appear before the add-item
- * form so users immediately see the cart total without scrolling past the form.
- * The top section uses flex-col on mobile and a 3-col grid on md+.
- *
- * FIX (responsiveness): Dashboard sidebar is now visible at md (768px) not just
- * lg (1024px) — see Dashboard.jsx for the grid change.
- */
+
 export default function Cart({
   items = [],
   onAddItem,
